@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>使用超链接下载canvas</title>
 </head>
 <body>
+    <canvas id="canvas"></canvas>
 
+    <script>
+
+      canvas.width = 300
+      canvas.height = 300
+      let ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#ff0000';
+      ctx.fillRect(20, 20, 180, 180)
+
+      let link = document.createElement('a');
+      link.innerHTML = 'download image';
+
+      link.addEventListener('click', function(ev) {
+        link.href = canvas.toDataURL();
+        link.download = 'test.png';
+      }, false);
+
+      document.body.appendChild(link);
+    </script>
 </body>
 </html>
