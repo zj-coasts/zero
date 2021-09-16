@@ -92,3 +92,23 @@ target.oncancel = event => {}
 > * error: Errord对象（对象）。
 > 
 > 若该函数返回true，阻止执行默认事件处理函数
+
+### onfocus
+    当元素或得键盘焦点时触发此事件。
+
+### ongotpointercapture
+    ???
+
+### oninput
+    当用户向<input>中输入内容时触发此事件。
+> 与oninput不同的是，onchange事件处理程序不一定会针对元素值的每次更改而调用。
+
+### oninvalid
+    提交的input值为无效值时会触发此事件
+> 例如：input设置了required属性，但是提交时该处为空就会触发oninvalid事件
+
+### onkeydown
+    当用户按下键盘上的按键时会触发此事件。
+
+### onkeyup
+    在当前元素上释放键盘按键时会触发此事件
