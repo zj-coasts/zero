@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex布局</title>
+	<style>
+		
+		li{
+			list-style: none;
+		}
+		.tab{
+			display: flex;
+			width: 30%;
+			height: 100px;
+		}
+		
+		.tab-item{
+			width: 25%;
+			height: 100%;
+			flex: none;
+			/*outline: brown 1px solid;*/
+			border: brown 1px solid;
+			border-right: none;
+			background-color: aqua;
+			/*margin-left: -1px;*/
+		}
+		
+		.tab-item:last-child{
+			border-right: brown 1px solid;
+		}
+	</style>
+</head>
+<body>
+<ul class="tab">
+	<li class="tab-item">A</li>
+	<li class="tab-item">B</li>
+	<li class="tab-item">C</li>
+	<li class="tab-item">D</li>
+	<li class="tab-item">E</li>
+</ul>
+</body>
+</html>
