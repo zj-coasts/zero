@@ -1,14 +1,13 @@
-const {useState} = require("react");
+import React, {Component, useState} from 'react';
 import { useUser } from "../../api/index"
 
 
-function Swr() {
+export default function Swr() {
   const [ users, setUsers ] = useState(null)
 
-  const { user, isLoading, isError } = useUser(id)
+  const { user, isLoading, isError } = useUser()
 
-  console.log(user, isLoading, isError)
   return (
-    <div>嗯哼{ users }</div>
+    <div>嗯哼{ user?.datas?.name }</div>
   )
 }

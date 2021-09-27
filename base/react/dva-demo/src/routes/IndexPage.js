@@ -3,6 +3,7 @@ import styles from './IndexPage.css';
 import{ connect } from 'dva'
 import { Tabs } from 'antd'
 import { useUser } from '../api'
+import Swr from "./test/swr";
 const { TabPane } = Tabs;
 
 @connect(item => {
@@ -21,6 +22,7 @@ export default class IndexPage extends Component {
 
     return (
     <div className={styles.normal}>
+      <Swr/>
     </div>
     )
   }
