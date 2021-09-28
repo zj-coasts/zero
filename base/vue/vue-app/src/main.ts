@@ -6,6 +6,9 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import { setGlobalOptions } from 'vue-request'
 import vueRequestGlobalOptions from './config/http/VueRequestGlobalOptions'
+
+import './styles/index.scss'
+
 setGlobalOptions(vueRequestGlobalOptions) // 设置request的全局配置
 
 createApp(App).use(router).use(store).use(Vant).mount('#app')
