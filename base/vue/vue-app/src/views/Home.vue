@@ -1,14 +1,12 @@
 <template>
-	<div style="font-size: 12px; font-weight: bold">
+	<div class="test">
 		首页
-	
+
 	</div>
 </template>
 
 <script setup lang="ts">
-import Button from 'vant/es/button';
 // 引入组件对应的样式，若组件没有样式文件，则无须引入
-import 'vant/es/button/style';
 import { ref, computed } from "vue";
 import { useStore } from 'vuex'
 import { getUser } from '../api'
@@ -17,9 +15,9 @@ const store = useStore()
 
 const name = computed(() => store.state.system.name)
 
-const count: number = ref(0)
+const count = ref(0)
 
-const { data } = getUser()
+const { data: any } = getUser()
 
 function clickHandler(): void {
 	count.value++;
@@ -29,5 +27,9 @@ function clickHandler(): void {
 </script>
 
 <style scoped>
-
+  .test{
+    width: 320px;
+    font-size: 16px;
+    display: flex;
+  }
 </style>
