@@ -11,7 +11,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src') // 别人配置
+      '@': resolve(__dirname, './src'), // 别名配置
+      '@/': resolve(__dirname, './src/*'), // 别名配置
+      '@comp': resolve(__dirname, './src/components'),
+      '@comp/': resolve(__dirname, './src/components/*'),
     }
   },
   // @ts-ignore
