@@ -16,3 +16,12 @@ export const useUser = () => {
     isError: error,
   }
 }
+
+/**
+ * 获取菜单
+ * @returns {{isLoading: boolean, isError, user}}
+ */
+export const getMenus = () => {
+  const { data, error } = useSWR('https://www.fastmock.site/mock/23058e56360d378cb556b71a016e8a5f/api/getMenus', fetcher, options)
+  if (data) return data.datas
+}
