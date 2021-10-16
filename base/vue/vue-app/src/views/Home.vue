@@ -1,5 +1,5 @@
 <template>
-	<div class="test">
+	<div class="test" style="width: 100%; height: 100%;" @click="clickHandler">
 		首页
 
 	</div>

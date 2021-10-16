@@ -12,7 +12,6 @@
 
 .content{
   flex: auto;
-  background-color: deepskyblue;
 }
 
 aside{
@@ -23,7 +22,6 @@ aside{
 
 header{
   flex: 0 0 10%;
-  background-color: burlywood;
 }
 
 ul, li{

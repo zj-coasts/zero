@@ -5,11 +5,13 @@ specifiers:
   '@vitejs/plugin-vue': ^1.2.3
   '@vue/compiler-sfc': ^3.0.5
   axios: ^0.21.4
+  naive-ui: ^2.19.8
   postcss: ^8.3.8
   postcss-pxtorem: ^6.0.0
   sass: ^1.42.1
   typescript: ^4.3.2
   vant: ^3.2.4
+  vfonts: ^0.1.0
   vite: ^2.3.7
   vue: '3.2'
   vue-request: ^1.2.0
@@ -29,20 +31,122 @@ dependencies:
 devDependencies:
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.9.2_vite@2.5.10
   '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.19
+  naive-ui: 2.19.8_vue@3.2.19
   postcss: registry.npmmirror.com/postcss/8.3.8
   postcss-pxtorem: 6.0.0_postcss@8.3.8
   sass: registry.nlark.com/sass/1.42.1
   typescript: registry.npmmirror.com/typescript/4.4.3
+  vfonts: 0.1.0
   vite: registry.npmmirror.com/vite/2.5.10
   vue-tsc: registry.nlark.com/vue-tsc/0.0.24
 
 packages:
+
+  /@css-render/plugin-bem/0.15.6:
+    resolution: {integrity: sha1-9/6kdN9PMmLvn7gBetocuXEs14o=, tarball: https://r.cnpmjs.org/@css-render/plugin-bem/download/@css-render/plugin-bem-0.15.6.tgz}
+    dependencies:
+      css-render: 0.15.6
+    dev: true
+
+  /@css-render/vue3-ssr/0.15.6_vue@3.2.19:
+    resolution: {integrity: sha1-TtwpS9p+bKIV9sfsniyDhWRQacM=, tarball: https://r.cnpmjs.org/@css-render/vue3-ssr/download/@css-render/vue3-ssr-0.15.6.tgz}
+    peerDependencies:
+      vue: ^3.0.11
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.19
+    dev: true
+
+  /@emotion/hash/0.8.0:
+    resolution: {integrity: sha1-u7/2iXj+/b5ozLUzvIy+HRr7VBM=, tarball: https://r.cnpmjs.org/@emotion/hash/download/@emotion/hash-0.8.0.tgz}
+    dev: true
+
+  /@jest/types/26.6.2:
+    resolution: {integrity: sha1-vvWlMgMOHYii9abZM/hOlyJu1I4=, tarball: https://r.cnpmjs.org/@jest/types/download/@jest/types-26.6.2.tgz}
+    engines: {node: '>= 10.14.2'}
+    dependencies:
+      '@types/istanbul-lib-coverage': 2.0.3
+      '@types/istanbul-reports': 3.0.1
+      '@types/node': 16.10.1
+      '@types/yargs': 15.0.14
+      chalk: 4.1.2
+    dev: true
+
+  /@types/istanbul-lib-coverage/2.0.3:
+    resolution: {integrity: sha1-S6jdtyAiH0MuRDvV+RF/0iz9R2I=, tarball: https://r.cnpmjs.org/@types/istanbul-lib-coverage/download/@types/istanbul-lib-coverage-2.0.3.tgz}
+    dev: true
+
+  /@types/istanbul-lib-report/3.0.0:
+    resolution: {integrity: sha1-wUwk8Y6oGQwRjudWK3/5mjZVJoY=, tarball: https://r.cnpmjs.org/@types/istanbul-lib-report/download/@types/istanbul-lib-report-3.0.0.tgz}
+    dependencies:
+      '@types/istanbul-lib-coverage': 2.0.3
+    dev: true
+
+  /@types/istanbul-reports/3.0.1:
+    resolution: {integrity: sha1-kVP+mLuivVZaY63ZQ21vDX+EaP8=, tarball: https://r.cnpmjs.org/@types/istanbul-reports/download/@types/istanbul-reports-3.0.1.tgz}
+    dependencies:
+      '@types/istanbul-lib-report': 3.0.0
+    dev: true
+
+  /@types/jest/26.0.24:
+    resolution: {integrity: sha1-lD0Rl2sWc5GFkToZNuDeDEp9WVo=, tarball: https://r.cnpmjs.org/@types/jest/download/@types/jest-26.0.24.tgz}
+    dependencies:
+      jest-diff: 26.6.2
+      pretty-format: 26.6.2
+    dev: true
+
+  /@types/lodash-es/4.17.5:
+    resolution: {integrity: sha1-HD/dFoSdhK6kOJCxxg2jeftQE1M=, tarball: https://r.cnpmjs.org/@types/lodash-es/download/@types/lodash-es-4.17.5.tgz}
+    dependencies:
+      '@types/lodash': 4.14.175
+    dev: true
+
+  /@types/lodash/4.14.175:
+    resolution: {integrity: sha1-t436lZGSsB+uCtkOFmR4dpshX0U=, tarball: https://r.cnpmjs.org/@types/lodash/download/@types/lodash-4.14.175.tgz}
+    dev: true
+
+  /@types/node/14.14.45:
+    resolution: {integrity: sha1-7C37VWb/gU0GGu9+FBV1rtuiRc8=, tarball: https://r.cnpmjs.org/@types/node/download/@types/node-14.14.45.tgz}
+    dev: true
+
+  /@types/node/14.17.26:
+    resolution: {integrity: sha1-R6U8fngESQFVpGRtYMjhlIFtBzw=, tarball: https://r.cnpmjs.org/@types/node/download/@types/node-14.17.26.tgz}
+    dev: true
+
+  /@types/node/16.10.1:
+    resolution: {integrity: sha1-82R2IxmcqSCWAAaz3M9jPqkF8kM=, tarball: https://r.cnpmjs.org/@types/node/download/@types/node-16.10.1.tgz}
+    dev: true
+
+  /@types/yargs-parser/20.2.1:
+    resolution: {integrity: sha1-O5ziSJkZ2eT+pDm3aRarw0st8Sk=, tarball: https://r.cnpmjs.org/@types/yargs-parser/download/@types/yargs-parser-20.2.1.tgz}
+    dev: true
+
+  /@types/yargs/15.0.14:
+    resolution: {integrity: sha1-Jtgh3biecEkhYLZtEKDrbfj2+wY=, tarball: https://r.cnpmjs.org/@types/yargs/download/@types/yargs-15.0.14.tgz}
+    dependencies:
+      '@types/yargs-parser': 20.2.1
+    dev: true
 
   /@vant/popperjs/1.1.0:
     resolution: {integrity: sha1-tO3uW7+m+xhwWYbjE9T9XxeUKg8=, tarball: '@vant/popperjs/download/@vant/popperjs-1.1.0.tgz'}
     dependencies:
       '@popperjs/core': registry.nlark.com/@popperjs/core/2.10.1
     dev: false
+
+  /ansi-regex/5.0.1:
+    resolution: {integrity: sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ=, tarball: https://r.cnpmjs.org/ansi-regex/download/ansi-regex-5.0.1.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /ansi-styles/4.3.0:
+    resolution: {integrity: sha1-7dgDYornHATIWuegkG7a00tkiTc=, tarball: https://r.cnpmjs.org/ansi-styles/download/ansi-styles-4.3.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      color-convert: 2.0.1
+    dev: true
+
+  /async-validator/4.0.3:
+    resolution: {integrity: sha1-yOzWso/I4YsUvk7HxwRkH5mdN30=, tarball: https://r.cnpmjs.org/async-validator/download/async-validator-4.0.3.tgz}
+    dev: true
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz?cache=0&sync_timestamp=1617714233441&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbalanced-match%2Fdownload%2Fbalanced-match-1.0.2.tgz}
@@ -71,8 +175,57 @@ packages:
       traverse: 0.3.9
     dev: true
 
+  /chalk/4.1.2:
+    resolution: {integrity: sha1-qsTit3NKdAhnrrFr8CqtVWoeegE=, tarball: https://r.cnpmjs.org/chalk/download/chalk-4.1.2.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: true
+
+  /color-convert/2.0.1:
+    resolution: {integrity: sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=, tarball: https://r.cnpmjs.org/color-convert/download/color-convert-2.0.1.tgz}
+    engines: {node: '>=7.0.0'}
+    dependencies:
+      color-name: 1.1.4
+    dev: true
+
+  /color-name/1.1.4:
+    resolution: {integrity: sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=, tarball: https://r.cnpmjs.org/color-name/download/color-name-1.1.4.tgz}
+    dev: true
+
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, tarball: concat-map/download/concat-map-0.0.1.tgz}
+    dev: true
+
+  /css-render/0.15.6:
+    resolution: {integrity: sha1-k7d4/8OBIPjNThNZQfDXbuTBt4M=, tarball: https://r.cnpmjs.org/css-render/download/css-render-0.15.6.tgz}
+    dependencies:
+      '@emotion/hash': 0.8.0
+      '@types/node': 14.14.45
+      csstype: 3.0.9
+    dev: true
+
+  /csstype/3.0.9:
+    resolution: {integrity: sha1-ZBCvMbJr0FIJM9AsvGT86c4/vws=, tarball: https://r.cnpmjs.org/csstype/download/csstype-3.0.9.tgz}
+    dev: true
+
+  /date-fns-tz/1.1.6_date-fns@2.25.0:
+    resolution: {integrity: sha1-k8vzVOKuss0xL/oy5GLBlDzyCo4=, tarball: https://r.cnpmjs.org/date-fns-tz/download/date-fns-tz-1.1.6.tgz}
+    peerDependencies:
+      date-fns: '>=2.0.0-alpha.13'
+    dependencies:
+      date-fns: 2.25.0
+    dev: true
+
+  /date-fns/2.25.0:
+    resolution: {integrity: sha1-jFyPHZWL44CamgP0t0LrqJT8VoA=, tarball: https://r.cnpmjs.org/date-fns/download/date-fns-2.25.0.tgz}
+    engines: {node: '>=0.11'}
+    dev: true
+
+  /diff-sequences/26.6.2:
+    resolution: {integrity: sha1-SLqZFX3hkjQS7tQdtrbUqpynwLE=, tarball: https://r.cnpmjs.org/diff-sequences/download/diff-sequences-26.6.2.tgz}
+    engines: {node: '>= 10.14.2'}
     dev: true
 
   /duplexer2/0.1.4:
@@ -84,12 +237,24 @@ packages:
   /estree-walker/2.0.2:
     resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
 
+  /evtd/0.2.2:
+    resolution: {integrity: sha1-vrvifhWu3B1cGLwmIN/JDyYHh8M=, tarball: https://r.cnpmjs.org/evtd/download/evtd-0.2.2.tgz}
+    dev: true
+
   /fill-range/7.0.1:
     resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, tarball: fill-range/download/fill-range-7.0.1.tgz}
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: registry.nlark.com/to-regex-range/5.0.1
     dev: true
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: https://r.cnpmjs.org/fsevents/download/fsevents-2.3.2.tgz}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /fstream/1.0.12:
     resolution: {integrity: sha1-Touo7i1Ivk99DeUFRVVI6uWTIEU=, tarball: fstream/download/fstream-1.0.12.tgz}
@@ -99,6 +264,16 @@ packages:
       inherits: registry.nlark.com/inherits/2.0.4
       mkdirp: 0.5.5
       rimraf: 2.7.1
+    dev: true
+
+  /has-flag/4.0.0:
+    resolution: {integrity: sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s=, tarball: https://r.cnpmjs.org/has-flag/download/has-flag-4.0.0.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /highlight.js/11.2.0:
+    resolution: {integrity: sha1-p+O4wf3E8FOLk7LcLd1TpAxqsPA=, tarball: https://r.cnpmjs.org/highlight.js/download/highlight.js-11.2.0.tgz}
+    engines: {node: '>=12.0.0'}
     dev: true
 
   /inflight/1.0.6:
@@ -113,8 +288,31 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /jest-diff/26.6.2:
+    resolution: {integrity: sha1-GqdGi1LDpo19XF/c381eSb0WQ5Q=, tarball: https://r.cnpmjs.org/jest-diff/download/jest-diff-26.6.2.tgz}
+    engines: {node: '>= 10.14.2'}
+    dependencies:
+      chalk: 4.1.2
+      diff-sequences: 26.6.2
+      jest-get-type: 26.3.0
+      pretty-format: 26.6.2
+    dev: true
+
+  /jest-get-type/26.3.0:
+    resolution: {integrity: sha1-6X3Dw/U8K0Bsp6+u1Ek7HQmRmeA=, tarball: https://r.cnpmjs.org/jest-get-type/download/jest-get-type-26.3.0.tgz}
+    engines: {node: '>= 10.14.2'}
+    dev: true
+
   /listenercount/1.0.1:
     resolution: {integrity: sha1-hMinKrWcRyUyFIDJdeZQg0LnCTc=, tarball: listenercount/download/listenercount-1.0.1.tgz}
+    dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha1-Q+YmxG5lkbd1C+srUBFzkMYJ4+4=, tarball: https://r.cnpmjs.org/lodash-es/download/lodash-es-4.17.21.tgz}
+    dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=, tarball: https://r.cnpmjs.org/lodash/download/lodash-4.17.21.tgz}
     dev: true
 
   /magic-string/0.25.7:
@@ -139,6 +337,32 @@ packages:
       minimist: 1.2.5
     dev: true
 
+  /naive-ui/2.19.8_vue@3.2.19:
+    resolution: {integrity: sha1-p/tdpZp3R5OT7ki0hHv3OOWDY/E=, tarball: https://r.cnpmjs.org/naive-ui/download/naive-ui-2.19.8.tgz}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@css-render/plugin-bem': 0.15.6
+      '@css-render/vue3-ssr': 0.15.6_vue@3.2.19
+      '@types/lodash': 4.14.175
+      '@types/lodash-es': 4.17.5
+      async-validator: 4.0.3
+      css-render: 0.15.6
+      date-fns: 2.25.0
+      date-fns-tz: 1.1.6_date-fns@2.25.0
+      evtd: 0.2.2
+      highlight.js: 11.2.0
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      seemly: 0.3.2
+      treemate: 0.3.8
+      vdirs: 0.1.4_vue@3.2.19
+      vfonts: 0.1.0
+      vooks: 0.2.9_vue@3.2.19
+      vue: registry.npmmirror.com/vue/3.2.19
+      vueuc: 0.4.13_2a438f66e619f19f0603eb72550dfb0d
+    dev: true
+
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=, tarball: path-is-absolute/download/path-is-absolute-1.0.1.tgz}
     engines: {node: '>=0.10.0'}
@@ -152,8 +376,22 @@ packages:
       postcss: registry.npmmirror.com/postcss/8.3.8
     dev: true
 
+  /pretty-format/26.6.2:
+    resolution: {integrity: sha1-41wnBfFMt/4v6U+geDRbREEg/JM=, tarball: https://r.cnpmjs.org/pretty-format/download/pretty-format-26.6.2.tgz}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@jest/types': 26.6.2
+      ansi-regex: 5.0.1
+      ansi-styles: 4.3.0
+      react-is: 17.0.2
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha1-eCDZsWEgzFXKmud5JoCufbptf+I=, tarball: process-nextick-args/download/process-nextick-args-2.0.1.tgz}
+    dev: true
+
+  /react-is/17.0.2:
+    resolution: {integrity: sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=, tarball: https://r.cnpmjs.org/react-is/download/react-is-17.0.2.tgz}
     dev: true
 
   /readdirp/3.6.0:
@@ -161,6 +399,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: registry.nlark.com/picomatch/2.3.0
+    dev: true
+
+  /resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=, tarball: https://r.cnpmjs.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz}
     dev: true
 
   /resolve/1.20.0:
@@ -177,6 +419,12 @@ packages:
       glob: registry.npmmirror.com/glob/7.2.0
     dev: true
 
+  /seemly/0.3.2:
+    resolution: {integrity: sha1-9FqssqB0i7nadmtc+AXTtZrJUCw=, tarball: https://r.cnpmjs.org/seemly/download/seemly-0.3.2.tgz}
+    dependencies:
+      '@types/jest': 26.0.24
+    dev: true
+
   /source-map-js/0.6.2:
     resolution: {integrity: sha1-C7XeYxtBz72mz7qL0FqA79/SOF4=, tarball: source-map-js/download/source-map-js-0.6.2.tgz}
     engines: {node: '>=0.10.0'}
@@ -184,8 +432,19 @@ packages:
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=, tarball: sourcemap-codec/download/sourcemap-codec-1.4.8.tgz}
 
+  /supports-color/7.2.0:
+    resolution: {integrity: sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=, tarball: https://r.cnpmjs.org/supports-color/download/supports-color-7.2.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      has-flag: 4.0.0
+    dev: true
+
   /traverse/0.3.9:
     resolution: {integrity: sha1-cXuPIgzAu3tE5AUUwisui7xw2Lk=, tarball: traverse/download/traverse-0.3.9.tgz}
+    dev: true
+
+  /treemate/0.3.8:
+    resolution: {integrity: sha1-eRwM1urlvb0s0EATQpOF9TZv3/Q=, tarball: https://r.cnpmjs.org/treemate/download/treemate-0.3.8.tgz}
     dev: true
 
   /unzipper/0.10.11:
@@ -205,6 +464,45 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: util-deprecate/download/util-deprecate-1.0.2.tgz}
+    dev: true
+
+  /vdirs/0.1.4_vue@3.2.19:
+    resolution: {integrity: sha1-xMD/hs9H/tA95fhp4mUxHvGIq3Q=, tarball: https://r.cnpmjs.org/vdirs/download/vdirs-0.1.4.tgz}
+    peerDependencies:
+      vue: ^3.0.11
+    dependencies:
+      '@types/node': 14.17.26
+      evtd: 0.2.2
+      vue: registry.npmmirror.com/vue/3.2.19
+    dev: true
+
+  /vfonts/0.1.0:
+    resolution: {integrity: sha1-wWrzfKBEsnJa5VVTBJKA775iIqk=, tarball: https://r.cnpmjs.org/vfonts/download/vfonts-0.1.0.tgz}
+    dev: true
+
+  /vooks/0.2.9_vue@3.2.19:
+    resolution: {integrity: sha1-NM26wHxzW2xNHoFqNHL8clFwl/Q=, tarball: https://r.cnpmjs.org/vooks/download/vooks-0.2.9.tgz}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      evtd: 0.2.2
+      vue: registry.npmmirror.com/vue/3.2.19
+    dev: true
+
+  /vueuc/0.4.13_2a438f66e619f19f0603eb72550dfb0d:
+    resolution: {integrity: sha1-4De/KrcGs1ZKj5yPFFczAYSYOmg=, tarball: https://r.cnpmjs.org/vueuc/download/vueuc-0.4.13.tgz}
+    peerDependencies:
+      '@css-render/vue3-ssr': ^0.15.3
+      vue: ^3.0.11
+    dependencies:
+      '@css-render/vue3-ssr': 0.15.6_vue@3.2.19
+      css-render: 0.15.6
+      evtd: 0.2.2
+      resize-observer-polyfill: 1.5.1
+      seemly: 0.3.2
+      vdirs: 0.1.4_vue@3.2.19
+      vooks: 0.2.9_vue@3.2.19
+      vue: registry.npmmirror.com/vue/3.2.19
     dev: true
 
   registry.nlark.com/@babel/parser/7.15.7:
@@ -242,6 +540,8 @@ packages:
     version: 0.21.4
     dependencies:
       follow-redirects: registry.nlark.com/follow-redirects/1.14.4
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   registry.nlark.com/big-integer/1.6.49:
@@ -296,7 +596,7 @@ packages:
       normalize-path: registry.nlark.com/normalize-path/3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: registry.nlark.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.nlark.com/core-util-is/1.0.3:
@@ -316,6 +616,11 @@ packages:
     name: follow-redirects
     version: 1.14.4
     engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   registry.nlark.com/fs.realpath/1.0.0:
@@ -323,15 +628,6 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
-
-  registry.nlark.com/fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fsevents/download/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.nlark.com/function-bind/1.1.1:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/function-bind/download/function-bind-1.1.1.tgz}
@@ -440,7 +736,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: registry.nlark.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.nlark.com/safe-buffer/5.1.2:
@@ -767,7 +1063,7 @@ packages:
       resolve: 1.20.0
       rollup: registry.nlark.com/rollup/2.57.0
     optionalDependencies:
-      fsevents: registry.nlark.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.npmmirror.com/vue/3.2.19:
