@@ -5,4 +5,4 @@
 > 启动命令
 <code>docsify serve</code>
 
-git config --global http.proxy localhost:51525
+git config --global http.sslVerify "false"
