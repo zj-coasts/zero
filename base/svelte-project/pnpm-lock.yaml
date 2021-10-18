@@ -10,9 +10,11 @@ specifiers:
   rollup-plugin-terser: ^7.0.0
   sirv-cli: ^1.0.0
   svelte: ^3.0.0
+  xy-ui: ^1.10.4
 
 dependencies:
   sirv-cli: 1.0.14
+  xy-ui: 1.10.4
 
 devDependencies:
   '@rollup/plugin-commonjs': 17.1.0_rollup@2.58.0
@@ -663,3 +665,7 @@ packages:
       utf-8-validate:
         optional: true
     dev: true
+
+  /xy-ui/1.10.4:
+    resolution: {integrity: sha1-Rxn560q2/SpdBszQjLVSOn9H5Vo=, tarball: https://r.cnpmjs.org/xy-ui/download/xy-ui-1.10.4.tgz}
+    dev: false

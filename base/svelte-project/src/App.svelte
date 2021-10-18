@@ -1,12 +1,34 @@
 <script>
-	export let name;
+	let list = [
+		{ id: 1, title: '学习React', status: '进行中' },
+		{ id: 2, title: '学习Vue', status: '已完成' },
+	]
+	
+	function getChecked() {
+		console.log(document.querySelectorAll('xy-checkbox[checked]'))
+	}
 </script>
-
+<header>
+	<xy-checkbox></xy-checkbox>
+	<xy-button-group>
+		<xy-button>新增</xy-button>
+		<xy-button type="danger">删除选中</xy-button>
+		<xy-button type="primary">完成选中</xy-button>
+		<xy-button type="danger">删除完成</xy-button>
+		<xy-button type="primary" on:click="{getChecked}">获取选中</xy-button>
+	</xy-button-group>
+	
+</header>
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<ul>
+		{ #each list as item }
+				<li>
+					<xy-checkbox></xy-checkbox>
+					<xy-input label="待办事项" value={item.title} disabled={item.status === '已完成'}></xy-input>
+				</li>
+		{/each}
+	</ul>
 </main>
-
 <style>
 	main {
 		text-align: center;
